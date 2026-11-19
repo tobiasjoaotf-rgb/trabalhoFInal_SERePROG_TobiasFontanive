@@ -1,28 +1,40 @@
-
 <!DOCTYPE html>
+<!-- Informa ao navegador que este documento usa HTML5. -->
 <html lang="pt-br">
 <head>
+    <!-- Define a codificação para exibir acentos e caracteres especiais. -->
     <meta charset="UTF-8">
+    <!-- Faz a página se adaptar a celulares, tablets e computadores. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descrição da página para mecanismos de busca. -->
     <meta name="description" content="Portfólio de Tobias Fontanive. Social Media, publicidade, design gráfico e comunicação digital.">
-    <title>Tobias Fontanive | Comunicação & Design</title>
+    <!-- Texto mostrado na aba do navegador. -->
+    <title>Tobias Fontanive | Comunicação &amp; Design</title>
+    <!-- Carrega o CSS do Bootstrap que está na pasta css do projeto. -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
+<!-- Define o fundo escuro e o texto branco como padrão. -->
 <body class="bg-dark text-white">
-    <!-- HEADER -->
+    <!-- Cabeçalho e menu de navegação do site. -->
     <header class="bg-primary bg-gradient py-3">
         <nav class="navbar navbar-expand-lg navbar-dark">
+            <!-- Centraliza e limita a largura do conteúdo. -->
             <div class="container">
+                <!-- Marca do site; o link leva ao início desta página. -->
                 <a class="navbar-brand" href="#inicio">
                     <span class="fw-bold">Tobias Fontanive</span>
                     <small class="d-block fs-6 fw-normal">Comunicação • Design • Social Media</small>
                 </a>
+                <!-- Botão que abre o menu em telas pequenas. -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                    <!-- Ícone de menu fornecido pelo Bootstrap. -->
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Links da navegação; o Bootstrap recolhe esta área em telas pequenas. -->
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto gap-lg-3">
-                        <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+                        <!-- aria-current indica que esta é a página atual. -->
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#inicio">Início</a></li>
                         <li class="nav-item"><a class="nav-link" href="../html/sobre.html">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
                         <li class="nav-item"><a class="nav-link" href="../html/contato.html">Contato</a></li>
@@ -31,40 +43,47 @@
             </div>
         </nav>
     </header>
-    <!-- HERO -->
+    <!-- Seção de apresentação principal da página. -->
     <section class="bg-primary bg-gradient text-white text-center py-5" id="inicio">
+        <!-- container centraliza o conteúdo; py-5 adiciona espaço vertical. -->
         <div class="container py-5">
             <div class="row justify-content-center">
+                <!-- Limita a largura do texto em telas grandes. -->
                 <div class="col-lg-9">
                     <p class="text-info fw-semibold text-uppercase">Criatividade • Estratégia • Comunicação</p>
                     <h1 class="display-3 fw-bold mb-4">Ideias que comunicam. Criatividade que conecta.</h1>
                     <p class="lead mb-4">Social Media, publicidade e design gráfico para transformar ideias em experiências e marcas em conexões.</p>
+                    <!-- Leva o visitante à página Sobre. -->
                     <a href="../html/sobre.html" class="btn btn-info btn-lg fw-semibold px-5">Conheça meu trabalho</a>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Conteúdo principal da página. -->
     <main>
-        <!-- SOBRE -->
+        <!-- Seção de apresentação pessoal. -->
         <section class="container py-5" id="sobre">
             <div class="row justify-content-center">
                 <div class="col-lg-9 text-center">
                     <h2 class="fw-bold mb-4">Muito prazer, sou Tobias!</h2>
-                    <p class="lead text-white-50">Sou apaixonado pelo universo da comunicação, publicidade e criatividade. Atuo na produção de conteúdos digitais, desenvolvimento de identidades visuais e projetos que conecta as marcas à pessoas.</p>
+                    <p class="lead text-white-50">Sou apaixonado pelo universo da comunicação, publicidade e criatividade. Atuo na produção de conteúdos digitais, no desenvolvimento de identidades visuais e em projetos que conectam marcas às pessoas.</p>
                     <p class="text-white-50">Acredito que uma comunicação eficiente nasce da combinação entre estratégia, criatividade e propósito.</p>
+                    <!-- Abre a página com mais informações sobre Tobias. -->
                     <a href="../html/sobre.html" class="btn btn-outline-info mt-3">Mais sobre mim!</a>
                 </div>
             </div>
         </section>
-        <!-- SERVIÇOS -->
+        <!-- Seção dos serviços oferecidos. O id serviços é usado pelo link do menu. -->
         <section class="bg-black py-5" id="servicos">
             <div class="container">
+                <!-- Título e introdução dos serviços. -->
                 <div class="text-center mb-5">
                     <h2 class="fw-bold">O que eu faço?</h2>
-                    <p class="text-white-50">Basicamente, sou eu quem "CRIA"!
-                        Soluções criativas para marcas, projetos e pessoas.</p>
+                    <p class="text-white-50">Basicamente, sou eu quem “cria”! Soluções criativas para marcas, projetos e pessoas.</p>
                 </div>
+                <!-- row organiza os cartões em uma grade responsiva. -->
                 <div class="row g-4">
+                    <!-- Cada cartão ocupa metade da linha em telas médias e um quarto em telas grandes. -->
                     <div class="col-md-6 col-lg-3">
                         <div class="card bg-dark text-white border-secondary h-100">
                             <div class="card-body p-4">
@@ -85,7 +104,7 @@
                         <div class="card bg-dark text-white border-secondary h-100">
                             <div class="card-body p-4">
                                 <h3 class="h5 text-info">Identidade Visual</h3>
-                                <p class="text-white-50 mb-0">Desenvolvimento de identidades que representam a essência e personalidade de cada marca.</p>
+                                <p class="text-white-50 mb-0">Desenvolvimento de identidades que representam a essência e a personalidade de cada marca.</p>
                             </div>
                         </div>
                     </div>
@@ -93,14 +112,14 @@
                         <div class="card bg-dark text-white border-secondary h-100">
                             <div class="card-body p-4">
                                 <h3 class="h5 text-info">Produção de Conteúdo</h3>
-                                <p class="text-white-50 mb-0">Edição de vídeos, Reels, campanhas de publicidade e materiais para comunicação digital.</p>
+                                <p class="text-white-50 mb-0">Edição de vídeos, Reels, campanhas publicitárias e materiais para comunicação digital.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- CRIATIVIDADE -->
+        <!-- Seção com uma mensagem sobre o trabalho e o propósito de comunicação. -->
         <section class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center py-4">
@@ -109,28 +128,31 @@
                 </div>
             </div>
         </section>
-        <!-- CONTATO -->
+        <!-- Seção de contato com links diretos para os canais digitais. -->
         <section class="bg-primary bg-gradient py-5" id="contato">
             <div class="container text-center">
                 <h2 class="fw-bold mb-3">Vamos criar algo juntos?</h2>
                 <p class="lead mb-4">Tem uma ideia, projeto ou marca que merece ganhar destaque? Vamos conversar!</p>
+                <!-- Lista os canais de contato. -->
                 <div class="mb-4">
                     <p><strong>WhatsApp:</strong> <a class="text-white" href="https://wa.me/5554984470342" target="_blank" rel="noopener noreferrer">(54) 98447-0342</a></p>
                     <p><strong>E-mail:</strong> <a class="text-white" href="mailto:tobiasj.emanuel@gmail.com">tobiasj.emanuel@gmail.com</a></p>
                     <p><strong>Instagram:</strong> <a class="text-white" href="https://instagram.com/tobiasjoao.tf" target="_blank" rel="noopener noreferrer">@tobiasjoao.tf</a></p>
                     <p><strong>Facebook:</strong> <a class="text-white" href="https://facebook.com/tobiasjoaotf" target="_blank" rel="noopener noreferrer">tobiasjoaotf</a></p>
                 </div>
+                <!-- Leva à página de contato com mais informações. -->
                 <a href="../html/contato.html" class="btn btn-info btn-lg fw-semibold px-5">Entre em contato</a>
             </div>
         </section>
     </main>
-    <!-- FOOTER -->
+    <!-- Rodapé do site. -->
     <footer class="bg-black text-center py-4">
         <div class="container">
             <p class="mb-1">© 2026 - Tobias João Tabolca Fontanive</p>
             <small class="text-white-50">Criatividade, estratégia e comunicação.</small>
         </div>
     </footer>
+    <!-- Carrega o JavaScript Bundle do Bootstrap para habilitar o menu responsivo. -->
     <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

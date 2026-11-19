@@ -1,37 +1,48 @@
-
 <!DOCTYPE html>
+<!-- Informa ao navegador que o documento usa HTML5. -->
 <html lang="pt-br">
 <head>
+    <!-- Permite exibir acentos e caracteres especiais corretamente. -->
     <meta charset="UTF-8">
+    <!-- Faz a página se adaptar a celulares, tablets e computadores. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descrição da página para mecanismos de busca. -->
     <meta name="description" content="Entre em contato com Tobias Fontanive para projetos de social media, design gráfico, publicidade e comunicação digital.">
+    <!-- Título mostrado na aba do navegador. -->
     <title>Contato | Tobias Fontanive</title>
+    <!-- Carrega o CSS do Bootstrap que está na pasta css do projeto. -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
+<!-- Define o fundo escuro e o texto branco como padrão. -->
 <body class="bg-dark text-white">
-    <!-- HEADER -->
+    <!-- Cabeçalho e menu de navegação do site. -->
     <header class="bg-primary bg-gradient py-3">
         <nav class="navbar navbar-expand-lg navbar-dark">
+            <!-- Centraliza e limita a largura do conteúdo do menu. -->
             <div class="container">
+                <!-- Marca do site: nome e descrição. -->
                 <a class="navbar-brand" href="../html/index.html">
                     <span class="fw-bold">Tobias Fontanive</span>
                     <small class="d-block fs-6 fw-normal">Comunicação • Design • Social Media</small>
                 </a>
+                <!-- Botão que abre o menu em telas pequenas. -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Links do menu; o Bootstrap recolhe e expande esta área no celular. -->
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto gap-lg-3">
                         <li class="nav-item"><a class="nav-link" href="../html/index.html">Início</a></li>
                         <li class="nav-item"><a class="nav-link" href="../html/sobre.html">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" href="../html/index.html#servicos">Serviços</a></li>
+                        <!-- active indica que esta é a página aberta atualmente. -->
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="../html/contato.html">Contato</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <!-- HERO -->
+    <!-- Apresentação principal da página de contato. -->
     <section class="bg-primary bg-gradient text-white text-center py-5">
         <div class="container py-5">
             <div class="row justify-content-center">
@@ -43,8 +54,9 @@
             </div>
         </div>
     </section>
+    <!-- Conteúdo principal da página. -->
     <main>
-        <!-- APRESENTAÇÃO -->
+        <!-- Explica ao visitante como entrar em contato. -->
         <section class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-9 text-center">
@@ -54,31 +66,37 @@
                 </div>
             </div>
         </section>
-        <!-- FORMULÁRIO -->
+        <!-- Formulário que prepara uma mensagem para enviar pelo WhatsApp. -->
         <section class="bg-black py-5">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
+                        <!-- Cartão Bootstrap que envolve o formulário. -->
                         <div class="card bg-dark text-white border-secondary">
                             <div class="card-body p-4 p-md-5">
                                 <h2 class="fw-bold mb-2">Conte-me sobre seu projeto</h2>
-                                <p class="text-white-50 mb-4">Preencha os campos e envie sua mensagem diretamente pelo WhatsApp.</p>
+                                <p class="text-white-50 mb-4">Preencha os campos e sua mensagem será preparada para envio pelo WhatsApp.</p>
+                                <!-- O JavaScript identifica este formulário pelo id form-contato. -->
                                 <form id="form-contato">
+                                    <!-- Campo obrigatório para o nome da pessoa. -->
                                     <div class="mb-3">
                                         <label for="nome" class="form-label">Nome completo</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome..." required>
+                                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome..." autocomplete="name" required>
                                     </div>
+                                    <!-- Campo obrigatório; o navegador verifica se o formato do e-mail é válido. -->
                                     <div class="mb-3">
                                         <label for="email" class="form-label">E-mail</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail..." required>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail..." autocomplete="email" required>
                                     </div>
+                                    <!-- Telefone é opcional. -->
                                     <div class="mb-3">
                                         <label for="telefone" class="form-label">Telefone / WhatsApp</label>
-                                        <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000">
+                                        <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel">
                                     </div>
+                                    <!-- A pessoa precisa escolher uma opção antes de enviar. -->
                                     <div class="mb-3">
                                         <label for="servico" class="form-label">Qual serviço você procura?</label>
-                                        <select class="form-select" id="servico" required>
+                                        <select class="form-select" id="servico" name="servico" required>
                                             <option value="" selected disabled>Selecione uma opção</option>
                                             <option value="Social Media">Social Media</option>
                                             <option value="Design Gráfico">Design Gráfico</option>
@@ -88,14 +106,17 @@
                                             <option value="Parcerias e Outros Projetos">Parcerias e Outros Projetos</option>
                                         </select>
                                     </div>
+                                    <!-- Campo opcional para resumir o motivo do contato. -->
                                     <div class="mb-3">
                                         <label for="assunto" class="form-label">Assunto</label>
-                                        <input type="text" class="form-control" id="assunto" placeholder="Sobre o que deseja conversar?">
+                                        <input type="text" class="form-control" id="assunto" name="assunto" placeholder="Sobre o que deseja conversar?">
                                     </div>
+                                    <!-- Campo obrigatório para a descrição do projeto ou da ideia. -->
                                     <div class="mb-4">
                                         <label for="mensagem" class="form-label">Sua mensagem</label>
-                                        <textarea class="form-control" id="mensagem" rows="6" placeholder="Conte um pouco sobre sua ideia ou projeto..." required></textarea>
+                                        <textarea class="form-control" id="mensagem" name="mensagem" rows="6" placeholder="Conte um pouco sobre sua ideia ou projeto..." required></textarea>
                                     </div>
+                                    <!-- Ao clicar, o JavaScript monta a mensagem e abre o WhatsApp. -->
                                     <button type="submit" class="btn btn-info btn-lg fw-semibold w-100">Enviar mensagem pelo WhatsApp</button>
                                 </form>
                             </div>
@@ -104,7 +125,7 @@
                 </div>
             </div>
         </section>
-        <!-- REDES SOCIAIS -->
+        <!-- Links para os canais de contato e redes sociais. -->
         <section class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-9 text-center">
@@ -112,19 +133,21 @@
                     <p class="text-white-50 mb-4">Acompanhe meus projetos, conheça meu trabalho e entre em contato pelos meus canais digitais.</p>
                     <div class="row g-3">
                         <div class="col-md-4">
+                            <!-- target abre o link em outra aba; rel melhora a segurança dessa abertura. -->
                             <a href="https://wa.me/5554984470342" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info w-100">WhatsApp</a>
                         </div>
                         <div class="col-md-4">
                             <a href="https://instagram.com/tobiasjoao.tf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info w-100">Instagram</a>
                         </div>
                         <div class="col-md-4">
+                            <!-- mailto abre o aplicativo de e-mail configurado no dispositivo. -->
                             <a href="mailto:tobiasj.emanuel@gmail.com" class="btn btn-outline-info w-100">E-mail</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- CHAMADA FINAL -->
+        <!-- Chamada final para conhecer a página Sobre. -->
         <section class="bg-primary bg-gradient py-5">
             <div class="container text-center">
                 <h2 class="fw-bold mb-3">Criatividade que transforma ideias.</h2>
@@ -133,24 +156,29 @@
             </div>
         </section>
     </main>
-    <!-- FOOTER -->
+    <!-- Rodapé do site. -->
     <footer class="bg-black text-center py-4">
         <div class="container">
             <p class="mb-1">© 2026 - Tobias João Tabolca Fontanive</p>
             <small class="text-white-50">Criatividade, estratégia e comunicação.</small>
         </div>
     </footer>
-    <!-- JAVASCRIPT -->
+    <!-- Carrega o JavaScript do Bootstrap, necessário para o menu responsivo. -->
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Código que monta a mensagem e direciona a pessoa ao WhatsApp ao enviar o formulário. -->
     <script>
+        // Localiza o formulário pelo id e executa esta função quando ele for enviado.
         document.getElementById("form-contato").addEventListener("submit", function(event) {
+            // Impede que o navegador recarregue a página ao enviar o formulário.
             event.preventDefault();
+            // Lê os valores dos campos e remove espaços extras no começo e no fim.
             const nome = document.getElementById("nome").value.trim();
             const email = document.getElementById("email").value.trim();
             const telefone = document.getElementById("telefone").value.trim();
             const servico = document.getElementById("servico").value;
             const assunto = document.getElementById("assunto").value.trim();
             const mensagem = document.getElementById("mensagem").value.trim();
+            // Cria o texto que será enviado pelo WhatsApp.
             const texto = `Olá, Tobias! Vim pelo seu portfólio e gostaria de conversar sobre um projeto.
 *Nome:* ${nome}
 *E-mail:* ${email}
@@ -159,7 +187,9 @@
 *Assunto:* ${assunto || "Não informado"}
 *Mensagem:*
 ${mensagem}`;
+            // Codifica o texto para que espaços, acentos e quebras de linha funcionem no endereço.
             const url = "https://wa.me/5554984470342?text=" + encodeURIComponent(texto);
+            // Abre o WhatsApp com a mensagem preenchida.
             window.location.href = url;
         });
     </script>
