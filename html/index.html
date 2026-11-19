@@ -1,226 +1,161 @@
+
 <!DOCTYPE html>
-<!-- Informa ao navegador que o documento utiliza HTML5. -->
 <html lang="pt-br">
-<!-- Define o idioma do site como português brasileiro. -->
 <head>
-    <!-- HEAD: contém as configurações gerais do site. -->
+    <!-- Configurações da página -->
     <meta charset="UTF-8">
-    <!-- Permite utilizar acentos e caracteres especiais. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Faz o site se adaptar a diferentes tamanhos de tela. -->
-    <meta name="description" content="Portfólio de Tobias Fontanive: comunicação, design gráfico, publicidade e social media.">
-    <!-- Descrição utilizada pelos mecanismos de busca. -->
+    <meta name="description" content="Portfólio de Tobias Fontanive - Comunicação e Design">
     <title>Tobias Fontanive | Comunicação & Design</title>
-    <!-- Título que aparece na aba do navegador. -->
+    <!-- CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Importa o arquivo CSS do Bootstrap, responsável pela estilização. -->
 </head>
 <body class="bg-dark text-white">
-<!-- BODY: conteúdo visível do site. bg-dark = fundo escuro; text-white = letras brancas. -->
-<!-- ==================== CABEÇALHO ==================== -->
+<!-- MENU DE NAVEGAÇÃO -->
 <header>
-    <!-- HEADER representa o cabeçalho do site. -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient py-3">
-        <!-- navbar = menu Bootstrap; navbar-expand-lg = menu expandido em telas grandes; bg-primary = azul; py-3 = espaçamento vertical. -->
         <div class="container">
-            <!-- container = centraliza o conteúdo e organiza as margens da página. -->
+            <!-- Nome e marca do site -->
             <a class="navbar-brand" href="#inicio">
-                <!-- navbar-brand = identificação da marca; href="#inicio" = leva para a primeira seção. -->
-                <span class="fw-bold">TF | Tobias Fontanive</span>
-                <!-- fw-bold = deixa o texto em negrito. -->
-                <small class="d-block fs-6 fw-normal">Comunicação • Design • Social Media</small>
-                <!-- d-block = coloca em outra linha; fs-6 = tamanho da fonte; fw-normal = peso normal. -->
+                <strong>TF | Tobias Fontanive</strong>
+                <small class="d-block">Comunicação • Design • Social Media</small>
             </a>
-            <!-- BOTÃO RESPONSIVO DO MENU -->
+            <!-- Botão do menu para celulares -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
-                <!-- navbar-toggler = botão do menu no celular; data-bs-toggle = ativa o recurso Collapse do Bootstrap. -->
                 <span class="navbar-toggler-icon"></span>
-                <!-- Ícone das três linhas do menu. -->
             </button>
-            <!-- LINKS DE NAVEGAÇÃO -->
+            <!-- Links que levam para as seções da página -->
             <div class="collapse navbar-collapse" id="menu">
-                <!-- collapse = esconde ou mostra os links; id="menu" = identifica esse elemento. -->
-                <ul class="navbar-nav ms-auto gap-lg-3">
-                    <!-- navbar-nav = lista de navegação; ms-auto = alinha à direita; gap-lg-3 = espaço entre os links em telas grandes. -->
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                    <!-- Link para a seção Início. -->
                     <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <!-- Link para a seção Sobre. -->
                     <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-                    <!-- Link para a seção Serviços. -->
                     <li class="nav-item"><a class="nav-link" href="#experiencias">Experiências</a></li>
-                    <!-- Link para a seção Experiências. -->
                     <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                    <!-- Link para a seção Galeria. -->
                     <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                    <!-- Link para a seção Contato. -->
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
 <main>
-    <!-- MAIN: reúne todas as seções principais do site. -->
-    <!-- ==================== SEÇÃO INÍCIO ==================== -->
+    <!-- INÍCIO DO SITE -->
     <section id="inicio" class="bg-primary bg-gradient py-5">
-        <!-- section = divide a página; id="inicio" permite a navegação pelo menu; bg-primary = azul. -->
         <div class="container py-5">
-            <!-- container = centraliza o conteúdo; py-5 = espaçamento vertical. -->
-            <div class="row align-items-center g-5">
-                <!-- row = linha do grid; align-items-center = centraliza verticalmente; g-5 = espaço entre colunas. -->
+            <div class="row align-items-center g-4">
+                <!-- Texto da apresentação -->
                 <div class="col-lg-7">
-                    <!-- col-lg-7 = ocupa 7 das 12 colunas em telas grandes. -->
-                    <p class="text-info fw-semibold text-uppercase">Criatividade • Estratégia • Comunicação</p>
-                    <!-- text-info = azul-claro; fw-semibold = seminegrito; text-uppercase = letras maiúsculas. -->
+                    <p class="text-info fw-bold">CRIATIVIDADE • ESTRATÉGIA • COMUNICAÇÃO</p>
                     <h1 class="display-3 fw-bold mb-4">Ideias que comunicam. Criatividade que conecta.</h1>
-                    <!-- h1 = título principal; display-3 = fonte grande; mb-4 = margem inferior. -->
-                    <!-- CARROSSEL DE FRASES COM EFEITO DE TRANSIÇÃO -->
+                    <!-- Carrossel de frases com transição -->
                     <div id="frasesDestaque" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel" data-bs-interval="5000">
-                        <!-- carousel = carrossel Bootstrap; carousel-fade = transição suave; data-bs-interval="5000" = troca a cada 5 segundos. -->
                         <div class="carousel-inner">
-                            <!-- carousel-inner = área interna que contém os slides. -->
                             <div class="carousel-item active">
-                                <!-- carousel-item = slide; active = primeiro slide exibido. -->
-                                <p class="lead mb-0">Social Media, publicidade e design gráfico para transformar ideias em experiências e marcas em conexões.</p>
-                                <!-- lead = texto em destaque; mb-0 = sem margem inferior. -->
+                                <p class="lead">Social Media, publicidade e design gráfico para transformar ideias em experiências e marcas em conexões.</p>
                             </div>
                             <div class="carousel-item">
-                                <!-- Segundo slide do carrossel. -->
-                                <p class="lead mb-0">Comunicação com propósito, criatividade e estratégias pensadas para cada projeto.</p>
+                                <p class="lead">Comunicação com propósito, criatividade e estratégias pensadas para cada projeto.</p>
                             </div>
                             <div class="carousel-item">
-                                <!-- Terceiro slide do carrossel. -->
-                                <p class="lead mb-0">Do conceito à criação, cada detalhe ajuda a contar uma história.</p>
+                                <p class="lead">Do conceito à criação, cada detalhe ajuda a contar uma história.</p>
                             </div>
                         </div>
                     </div>
-                    <!-- BOTÃO PARA A SEÇÃO SOBRE -->
-                    <a href="#sobre" class="btn btn-info btn-lg fw-semibold px-4">Conheça meu trabalho</a>
-                    <!-- btn = botão Bootstrap; btn-info = azul-claro; btn-lg = grande; px-4 = espaçamento horizontal. -->
+                    <a href="#sobre" class="btn btn-info btn-lg">Conheça meu trabalho</a>
                 </div>
-                <!-- COLUNA DA FOTO PRINCIPAL -->
+                <!-- Minha fotografia -->
                 <div class="col-lg-5 text-center">
-                    <!-- col-lg-5 = ocupa 5 colunas; 7 + 5 = 12, completando a linha. -->
                     <img src="../img/eu (12).JPEG" class="img-fluid rounded-4 shadow-lg" alt="Foto de Tobias Fontanive">
-                    <!-- img = imagem; src = caminho; img-fluid = responsiva; rounded-4 = cantos arredondados; shadow-lg = sombra. -->
                 </div>
             </div>
         </div>
     </section>
-    <!-- ==================== SEÇÃO SOBRE ==================== -->
+    <!-- SOBRE MIM -->
     <section id="sobre" class="container py-5">
-        <!-- Seção destinada à apresentação pessoal e profissional. -->
         <div class="row justify-content-center">
-            <!-- justify-content-center = centraliza horizontalmente as colunas. -->
             <div class="col-lg-10">
-                <!-- col-lg-10 = ocupa 10 das 12 colunas em telas grandes. -->
-                <p class="text-info fw-semibold text-uppercase">Quem sou eu?</p>
-                <!-- Parágrafo de identificação da seção. -->
+                <p class="text-info fw-bold">QUEM SOU EU?</p>
                 <h2 class="fw-bold mb-4">Muito além de uma tela.</h2>
-                <!-- h2 = título de segundo nível; fw-bold = negrito. -->
                 <p class="lead text-white-50">Meu nome é Tobias João Tabolca Fontanive, tenho 18 anos e sou estudante do curso Técnico em Manutenção e Suporte em Informática integrado ao Ensino Médio, no IFRS – Campus Sertão.</p>
-                <!-- lead = parágrafo em destaque; text-white-50 = texto branco com transparência. -->
                 <p class="text-white-50">Minha trajetória reúne diferentes paixões: comunicação, publicidade, design gráfico, tecnologia e organização de eventos. Gosto de explorar ideias, desenvolver projetos e encontrar maneiras criativas de transmitir mensagens.</p>
-                <!-- Parágrafo sobre meus interesses e experiências. -->
                 <p class="text-white-50">Atuo na criação de conteúdos para redes sociais, desenvolvimento de materiais gráficos, identidades visuais e comunicação de projetos e iniciativas. Cada experiência contribui para construir minha visão sobre o universo da publicidade e do marketing digital.</p>
-                <!-- Parágrafo sobre minha atuação profissional. -->
                 <p class="text-white-50">Mais do que criar algo visualmente bonito, acredito que a comunicação precisa ter propósito, transmitir personalidade e gerar conexões verdadeiras.</p>
-                <!-- Parágrafo que apresenta minha visão sobre comunicação. -->
             </div>
         </div>
     </section>
-    <!-- ==================== SEÇÃO SERVIÇOS ==================== -->
+    <!-- SERVIÇOS -->
     <section id="servicos" class="bg-black py-5">
-        <!-- bg-black = fundo preto; py-5 = espaçamento superior e inferior. -->
         <div class="container">
-            <!-- Centraliza o conteúdo dos serviços. -->
             <div class="text-center mb-5">
-                <!-- text-center = centraliza os textos; mb-5 = margem inferior. -->
                 <h2 class="fw-bold">O que eu faço?</h2>
                 <p class="text-white-50">Onde criatividade, estratégia e tecnologia se encontram.</p>
             </div>
-            <!-- LINHA DOS QUATRO CARDS -->
+            <!-- Cards organizados pelo grid do Bootstrap -->
             <div class="row g-4">
-                <!-- row = linha; g-4 = espaço entre os cards. -->
-                <!-- CARD 1: SOCIAL MEDIA -->
+                <!-- Card 1 -->
                 <div class="col-md-6 col-lg-3">
-                    <!-- col-md-6 = 2 cards por linha em telas médias; col-lg-3 = 4 por linha em telas grandes. -->
                     <div class="card bg-dark text-white border-secondary h-100">
-                        <!-- card = cartão Bootstrap; bg-dark = fundo escuro; border-secondary = borda cinza; h-100 = altura total. -->
                         <div class="card-body p-4">
-                            <!-- card-body = conteúdo interno; p-4 = espaçamento em todos os lados. -->
                             <h3 class="h5 text-info">Social Media</h3>
-                            <!-- h3 = subtítulo; h5 = tamanho visual menor; text-info = azul-claro. -->
-                            <p class="text-white-50 mb-0">Planejamento e criação de conteúdos estratégicos para fortalecer marcas nas redes sociais.</p>
+                            <p class="text-white-50">Planejamento e criação de conteúdos estratégicos para fortalecer marcas nas redes sociais.</p>
                         </div>
                     </div>
                 </div>
-                <!-- CARD 2: DESIGN GRÁFICO -->
+                <!-- Card 2 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-dark text-white border-secondary h-100">
                         <div class="card-body p-4">
                             <h3 class="h5 text-info">Design Gráfico</h3>
-                            <p class="text-white-50 mb-0">Criação de peças digitais, materiais publicitários e soluções visuais criativas.</p>
+                            <p class="text-white-50">Criação de peças digitais, materiais publicitários e soluções visuais criativas.</p>
                         </div>
                     </div>
                 </div>
-                <!-- CARD 3: IDENTIDADE VISUAL -->
+                <!-- Card 3 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-dark text-white border-secondary h-100">
                         <div class="card-body p-4">
                             <h3 class="h5 text-info">Identidade Visual</h3>
-                            <p class="text-white-50 mb-0">Desenvolvimento de identidades que representam a essência e a personalidade de cada marca.</p>
+                            <p class="text-white-50">Desenvolvimento de identidades que representam a essência e a personalidade de cada marca.</p>
                         </div>
                     </div>
                 </div>
-                <!-- CARD 4: PRODUÇÃO DE CONTEÚDO -->
+                <!-- Card 4 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-dark text-white border-secondary h-100">
                         <div class="card-body p-4">
                             <h3 class="h5 text-info">Produção de Conteúdo</h3>
-                            <p class="text-white-50 mb-0">Edição de vídeos, Reels, campanhas publicitárias e materiais para comunicação digital.</p>
+                            <p class="text-white-50">Edição de vídeos, Reels, campanhas publicitárias e materiais para comunicação digital.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ==================== SEÇÃO EXPERIÊNCIAS ==================== -->
+    <!-- EXPERIÊNCIAS -->
     <section id="experiencias" class="container py-5">
-        <!-- Apresenta projetos e experiências que fazem parte da minha trajetória. -->
-        <div class="row align-items-center g-5">
-            <!-- Divide o conteúdo em texto e imagem. -->
+        <div class="row align-items-center g-4">
             <div class="col-lg-7">
-                <!-- Coluna de textos: ocupa 7 das 12 colunas. -->
                 <h2 class="fw-bold mb-4">Experiências que constroem minha trajetória.</h2>
                 <p class="text-white-50">Ao longo da minha formação, participei de projetos acadêmicos, iniciativas sociais, atividades culturais e eventos que fortaleceram minhas habilidades de liderança, criatividade e comunicação.</p>
                 <p class="text-white-50">Entre essas experiências, destaco minha participação no Projeto E-Lixo, do IFRS – Campus Sertão, no desenvolvimento de materiais de comunicação e na organização de eventos como o Shark Tank TMSI.</p>
                 <p class="text-white-50">Também desenvolvo trabalhos de comunicação digital e criação de conteúdos para diferentes públicos, buscando sempre unir estética, informação e estratégia.</p>
             </div>
             <div class="col-lg-5 text-center">
-                <!-- Coluna da imagem: ocupa 5 das 12 colunas. -->
-                <img src="../img/eu (1).PNG" alt="Tobias participando de evento" class="img-fluid rounded-4 shadow-lg">
-                <!-- img-fluid = imagem responsiva; rounded-4 = bordas arredondadas; shadow-lg = sombra. -->
+                <img src="../img/eu (1).PNG" class="img-fluid rounded-4 shadow-lg" alt="Tobias participando de evento">
             </div>
         </div>
     </section>
-    <!-- ==================== SEÇÃO HABILIDADES ==================== -->
+    <!-- HABILIDADES E FERRAMENTAS -->
     <section class="bg-black py-5">
-        <!-- Seção com habilidades pessoais e ferramentas utilizadas. -->
         <div class="container">
-            <h2 class="fw-bold text-center mb-5">Habilidades e ferramentas</h2>
-            <!-- Título centralizado e em negrito. -->
+            <h2 class="text-center fw-bold mb-5">Habilidades e ferramentas</h2>
             <div class="row g-4">
-                <!-- Linha com dois cards. -->
-                <!-- CARD DE HABILIDADES CRIATIVAS -->
+                <!-- Habilidades -->
                 <div class="col-md-6">
-                    <!-- Cada card ocupa metade da linha em telas médias ou grandes. -->
                     <div class="card bg-dark text-white border-secondary h-100">
                         <div class="card-body p-4">
-                            <h3 class="h5 text-info mb-3">Habilidades criativas</h3>
-                            <ul class="text-white-50 mb-0">
-                                <!-- ul = lista não ordenada; li = item da lista. -->
+                            <h3 class="h5 text-info">Habilidades criativas</h3>
+                            <ul class="text-white-50">
                                 <li>Design gráfico e identidade visual</li>
                                 <li>Criação e planejamento de conteúdo</li>
                                 <li>Comunicação e escrita criativa</li>
@@ -231,12 +166,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- CARD DE FERRAMENTAS -->
+                <!-- Programas e tecnologias -->
                 <div class="col-md-6">
                     <div class="card bg-dark text-white border-secondary h-100">
                         <div class="card-body p-4">
-                            <h3 class="h5 text-info mb-3">Ferramentas e tecnologias</h3>
-                            <ul class="text-white-50 mb-0">
+                            <h3 class="h5 text-info">Ferramentas e tecnologias</h3>
+                            <ul class="text-white-50">
                                 <li>Pacote Office</li>
                                 <li>Pacote Adobe</li>
                                 <li>Pacote Apple Creators</li>
@@ -250,16 +185,12 @@
             </div>
         </div>
     </section>
-    <!-- ==================== SEÇÃO ALÉM DO DIGITAL ==================== -->
+    <!-- ALÉM DO DIGITAL -->
     <section class="container py-5">
-        <!-- Apresenta experiências pessoais além da tecnologia. -->
-        <div class="row align-items-center g-5">
-            <!-- Coluna da fotografia. -->
+        <div class="row align-items-center g-4">
             <div class="col-lg-5 text-center">
-                <img src="../img/eu (7).JPEG" alt="Tobias em ensaio fotográfico de formatura" class="img-fluid rounded-4 shadow-lg">
-                <!-- Fotografia responsiva com cantos arredondados. -->
+                <img src="../img/eu (7).JPEG" class="img-fluid rounded-4 shadow-lg" alt="Ensaio de formatura">
             </div>
-            <!-- Coluna dos textos. -->
             <div class="col-lg-7">
                 <h2 class="fw-bold mb-4">Além do digital, muitas histórias.</h2>
                 <p class="text-white-50">Minha personalidade também é construída pelas experiências que vivo fora das telas. Faço parte do CTG Getúlio Vargas, participo de atividades culturais e estou envolvido em iniciativas comunitárias e religiosas.</p>
@@ -268,188 +199,145 @@
             </div>
         </div>
     </section>
-
-<!-- ==================== SEÇÃO GALERIA ==================== -->
-<section id="galeria" class="bg-black py-5">
-    <!-- Galeria de fotografias utilizando o carrossel do Bootstrap. -->
-    <div class="container">
-        <!-- container = centraliza o conteúdo. -->
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Alguns registros da minha trajetória</h2>
-            <p class="text-white-50">Diferentes momentos, experiências e versões de quem sou.</p>
-        </div>
-        <!-- CARROSSEL DE FOTOGRAFIAS -->
-        <div id="carrosselTrajetoria" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-            <!-- carousel = carrossel Bootstrap; data-bs-ride = inicia automaticamente; interval = troca a cada 5 segundos. -->
-            <!-- INDICADORES DO CARROSSEL -->
-            <div class="carousel-indicators">
-                <!-- Indicadores para selecionar os grupos de fotografias. -->
-                <button type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Grupo de fotos 1"></button>
-                <button type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide-to="1" aria-label="Grupo de fotos 2"></button>
-                <button type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide-to="2" aria-label="Grupo de fotos 3"></button>
-            </div>
-            <!-- CONTEÚDO DO CARROSSEL -->
-            <div class="carousel-inner pb-4">
-                <!-- carousel-inner = área dos slides; pb-4 = espaçamento inferior. -->
-                <!-- PRIMEIRO GRUPO DE FOTOS -->
-                <div class="carousel-item active">
-                    <!-- active = primeiro slide exibido. -->
-                    <div class="row g-3">
-                        <!-- row = linha; g-3 = espaçamento entre fotos. -->
-                        <!-- FOTO 1 -->
-                        <div class="col-6 col-md-3">
-                            <!-- col-6 = 2 fotos por linha no celular; col-md-3 = 4 fotos por linha no computador. -->
-                            <div class="ratio ratio-1x1">
-                                <!-- ratio-1x1 = mantém a área da fotografia quadrada. -->
-                                <img src="../img/eu (2).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Retrato de Tobias">
-                                <!-- object-fit-cover = preenche o quadrado, podendo cortar as bordas da imagem. -->
-                            </div>
-                        </div>
-                        <!-- FOTO 2 -->
-                        <div class="col-6 col-md-3">
-                            <div class="ratio ratio-1x1">
-                                <img src="../img/eu (3).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Tobias em evento">
-                            </div>
-                        </div>
-                        <!-- FOTO 3 -->
-                        <div class="col-6 col-md-3">
-                            <div class="ratio ratio-1x1">
-                                <img src="../img/eu (9).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Tobias em ensaio criativo">
-                            </div>
-                        </div>
-                        <!-- FOTO 4 -->
-                        <div class="col-6 col-md-3">
-                            <div class="ratio ratio-1x1">
-                                <img src="../img/eu (11).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Tobias em evento social">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- SEGUNDO GRUPO DE FOTOS -->
-                <div class="carousel-item">
-                    <div class="row g-3">
-                        <!-- FOTO 5 -->
-                        <div class="col-6 col-md-3">
-                            <div class="ratio ratio-1x1">
-                                <img src="../img/eu.JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Registro da trajetória">
-                            </div>
-                        </div>
-                        <!-- FOTO 6 -->
-                        <div class="col-6 col-md-3">
-                            <div class="ratio ratio-1x1">
-                                <img src="../img/eu (1).PNG" class="w-100 h-100 object-fit-cover rounded-3" alt="Tobias participando de evento">
-                            </div>
-                        </div>
-                        <!-- FOTO 7 -->
-                        <div class="col-6 col-md-3">
-                            <div class="ratio ratio-1x1">
-                                <img src="../img/eu (4).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Momento especial">
-                            </div>
-                        </div>
-                        <!-- FOTO 8 -->
-                        <div class="col-6 col-md-3">
-                            <div class="ratio ratio-1x1">
-                                <img src="../img/eu (5).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Outro registro da trajetória">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- TERCEIRO GRUPO DE FOTOS -->
-                <div class="carousel-item">
-                    <div class="row g-3">
-                        <!-- FOTO 9 -->
-                        <div class="col-6 col-md-3">
-                            <div class="ratio ratio-1x1">
-                                <img src="../img/eu (6).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Momento especial">
-                            </div>
-                        </div>
-                        <!-- FOTO 10 -->
-                        <div class="col-6 col-md-3">
-                            <div class="ratio ratio-1x1">
-                                <img src="../img/eu (7).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Ensaio de formatura">
-                            </div>
-                        </div>
-                        <!-- FOTO 11 -->
-                        <div class="col-6 col-md-3">
-                            <div class="ratio ratio-1x1">
-                                <img src="../img/eu (8).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Experiência da trajetória">
-                            </div>
-                        </div>
-                        <!-- FOTO 12 -->
-                        <div class="col-6 col-md-3">
-                            <div class="ratio ratio-1x1">
-                                <img src="../img/eu (10).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Registro da trajetória">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- BOTÃO PARA VOLTAR AS FOTOS -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide="prev" aria-label="Fotos anteriores">
-                <!-- data-bs-slide="prev" = volta um slide. -->
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <!-- BOTÃO PARA AVANÇAR AS FOTOS -->
-            <button class="carousel-control-next" type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide="next" aria-label="Próximas fotos">
-                <!-- data-bs-slide="next" = avança um slide. -->
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-        </div>
-    </div>
-</section>
-    <!-- ==================== SEÇÃO CONTATO ==================== -->
-    <section id="contato" class="py-5">
-        <!-- Seção com formulário e links de contato. -->
+    <!-- GALERIA DE FOTOS -->
+    <section id="galeria" class="bg-black py-5">
         <div class="container">
-            <!-- TÍTULO DA SEÇÃO -->
             <div class="text-center mb-5">
-                <p class="text-info fw-semibold text-uppercase">Contato • Parcerias • Projetos</p>
+                <h2 class="fw-bold">Alguns registros da minha trajetória</h2>
+                <p class="text-white-50">Diferentes momentos, experiências e versões de quem sou.</p>
+            </div>
+            <!-- Carrossel com três grupos de quatro fotos -->
+            <div id="carrosselTrajetoria" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Grupo 1"></button>
+                    <button type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide-to="1" aria-label="Grupo 2"></button>
+                    <button type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide-to="2" aria-label="Grupo 3"></button>
+                </div>
+                <div class="carousel-inner pb-4">
+                    <!-- Primeiro grupo de fotos -->
+                    <div class="carousel-item active">
+                        <div class="row g-3">
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu (2).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 1">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu (3).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 2">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu (9).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 3">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu (11).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Segundo grupo de fotos -->
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu.JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 5">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu (1).PNG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 6">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu (4).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 7">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu (5).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 8">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Terceiro grupo de fotos -->
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu (6).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 9">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu (7).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 10">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu (8).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 11">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="ratio ratio-1x1">
+                                    <img src="../img/eu (10).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 12">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Botões para trocar os slides -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide="prev" aria-label="Anterior">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide="next" aria-label="Próximo">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- CONTATO -->
+    <section id="contato" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="text-info fw-bold">CONTATO • PARCERIAS • PROJETOS</p>
                 <h2 class="fw-bold">Vamos criar algo incrível juntos?</h2>
                 <p class="lead text-white-50">Toda grande ideia começa com uma conversa. Conte-me sobre seu projeto.</p>
             </div>
-            <!-- FORMULÁRIO -->
+            <!-- Formulário de contato -->
             <div class="row justify-content-center">
-                <!-- Centraliza o formulário horizontalmente. -->
                 <div class="col-lg-8">
-                    <!-- Ocupa 8 das 12 colunas em telas grandes. -->
                     <div class="card bg-black text-white border-secondary">
-                        <!-- Cria um card escuro para o formulário. -->
-                        <div class="card-body p-4 p-md-5">
-                            <!-- p-4 = espaçamento interno; p-md-5 = espaçamento maior em telas médias. -->
-                            <h3 class="fw-bold mb-2">Conte-me sobre seu projeto</h3>
-                            <p class="text-white-50 mb-4">Demonstração de formulário com validação e confirmação na própria página.</p>
+                        <div class="card-body p-4">
+                            <h3 class="fw-bold">Conte-me sobre seu projeto</h3>
+                            <p class="text-white-50">Preencha o formulário abaixo para testar a validação dos campos.</p>
                             <form id="form-contato" novalidate>
-                                <!-- form = formulário; id = identificação utilizada no JavaScript; novalidate = desativa os avisos automáticos do navegador. -->
-                                <!-- CAMPO NOME -->
+                                <!-- Nome obrigatório -->
                                 <div class="mb-3">
-                                    <!-- mb-3 = margem inferior. -->
                                     <label for="nome" class="form-label">Nome completo</label>
-                                    <!-- label = identificação do campo; for="nome" associa ao input com id="nome". -->
-                                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome..." autocomplete="name" required>
-                                    <!-- type="text" = texto; form-control = estilo Bootstrap; required = obrigatório. -->
+                                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
                                     <div class="invalid-feedback">Informe seu nome.</div>
-                                    <!-- invalid-feedback = mensagem mostrada quando o campo está inválido. -->
                                 </div>
-                                <!-- CAMPO E-MAIL -->
+                                <!-- E-mail obrigatório -->
                                 <div class="mb-3">
                                     <label for="email" class="form-label">E-mail</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail..." autocomplete="email" required>
-                                    <!-- type="email" = verifica o formato do endereço; required = obrigatório. -->
+                                    <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
                                     <div class="invalid-feedback">Informe um e-mail válido.</div>
                                 </div>
-                                <!-- CAMPO TELEFONE -->
+                                <!-- Telefone opcional -->
                                 <div class="mb-3">
                                     <label for="telefone" class="form-label">Telefone / WhatsApp (opcional)</label>
-                                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel">
-                                    <!-- type="tel" = telefone; sem required porque o campo é opcional. -->
+                                    <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000">
                                 </div>
-                                <!-- SELEÇÃO DO SERVIÇO -->
+                                <!-- Lista de serviços -->
                                 <div class="mb-3">
                                     <label for="servico" class="form-label">Qual serviço você procura?</label>
-                                    <select class="form-select" id="servico" name="servico" required>
-                                        <!-- select = lista de opções; form-select = estilo Bootstrap; required = obrigatório. -->
+                                    <select class="form-select" id="servico" required>
                                         <option value="" selected disabled>Selecione uma opção</option>
-                                        <!-- value="" = sem valor; selected = aparece primeiro; disabled = não pode ser selecionada como resposta válida. -->
                                         <option>Social Media</option>
                                         <option>Design Gráfico</option>
                                         <option>Identidade Visual</option>
@@ -459,159 +347,94 @@
                                     </select>
                                     <div class="invalid-feedback">Selecione um serviço.</div>
                                 </div>
-                                <!-- CAMPO ASSUNTO -->
+                                <!-- Assunto opcional -->
                                 <div class="mb-3">
                                     <label for="assunto" class="form-label">Assunto (opcional)</label>
-                                    <input type="text" class="form-control" id="assunto" name="assunto" placeholder="Sobre o que deseja conversar?">
-                                    <!-- Campo de texto opcional. -->
+                                    <input type="text" class="form-control" id="assunto" placeholder="Assunto da mensagem">
                                 </div>
-                                <!-- CAMPO MENSAGEM -->
-                                <div class="mb-4">
+                                <!-- Mensagem obrigatória -->
+                                <div class="mb-3">
                                     <label for="mensagem" class="form-label">Sua mensagem</label>
-                                    <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Conte um pouco sobre sua ideia ou projeto..." required></textarea>
-                                    <!-- textarea = campo para textos maiores; rows="5" = altura inicial de cinco linhas; required = obrigatório. -->
+                                    <textarea class="form-control" id="mensagem" rows="5" placeholder="Conte sobre sua ideia ou projeto" required></textarea>
                                     <div class="invalid-feedback">Escreva sua mensagem.</div>
                                 </div>
-                                <!-- BOTÃO DE VALIDAÇÃO -->
-                                <button type="submit" class="btn btn-info btn-lg fw-semibold w-100">Validar formulário</button>
-                                <!-- type="submit" = dispara o evento submit; btn-info = azul-claro; w-100 = largura total. -->
+                                <!-- Botão para validar os dados -->
+                                <button type="submit" class="btn btn-info btn-lg w-100">Validar formulário</button>
                             </form>
-                            <!-- Fim do formulário. -->
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- LINKS DE CONTATO -->
+            <!-- Links para as redes sociais -->
             <div class="text-center mt-5">
-                <!-- mt-5 = margem superior. -->
-                <h3 class="fw-bold mb-3">Vamos nos conectar?</h3>
+                <h3 class="fw-bold">Vamos nos conectar?</h3>
                 <p class="text-white-50">Acompanhe meus projetos e entre em contato pelos meus canais digitais.</p>
                 <div class="row g-3 justify-content-center">
-                    <!-- row = linha; g-3 = espaçamento; justify-content-center = centraliza os botões. -->
-                    <!-- WHATSAPP -->
                     <div class="col-md-3">
                         <a href="https://wa.me/5554984470342" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info w-100">WhatsApp</a>
-                        <!-- target="_blank" = abre em outra aba; btn-outline-info = botão com contorno azul-claro. -->
                     </div>
-                    <!-- INSTAGRAM -->
                     <div class="col-md-3">
                         <a href="https://instagram.com/tobiasjoao.tf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info w-100">Instagram</a>
-                        <!-- Link externo para o Instagram. -->
                     </div>
-                    <!-- E-MAIL -->
                     <div class="col-md-3">
                         <a href="mailto:tobiasj.emanuel@gmail.com" class="btn btn-outline-info w-100">E-mail</a>
-                        <!-- mailto: abre o aplicativo de e-mail configurado no dispositivo. -->
                     </div>
-                    <!-- FACEBOOK -->
                     <div class="col-md-3">
                         <a href="https://facebook.com/tobiasjoaotf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info w-100">Facebook</a>
-                        <!-- Link externo para o Facebook. -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </main>
-<!-- Fim do conteúdo principal da página. -->
-<!-- ==================== MODAL DE CONFIRMAÇÃO ==================== -->
-<!-- Modal = janela que aparece sobre o site após a validação do formulário. -->
+<!-- MODAL: janela de confirmação do formulário -->
 <div class="modal fade" id="modalSucesso" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
-    <!-- modal = janela Bootstrap; fade = efeito de transição; id="modalSucesso" = identificação para o JavaScript. -->
     <div class="modal-dialog modal-dialog-centered">
-        <!-- modal-dialog = estrutura da janela; modal-dialog-centered = centraliza verticalmente. -->
-        <div class="modal-content bg-dark text-white border-info">
-            <!-- modal-content = conteúdo da janela; bg-dark = fundo escuro; border-info = borda azul-clara. -->
-            <!-- CABEÇALHO DO MODAL -->
-            <div class="modal-header border-secondary">
-                <!-- modal-header = área superior; border-secondary = borda cinza. -->
+        <div class="modal-content bg-dark text-white">
+            <!-- Cabeçalho do modal -->
+            <div class="modal-header">
                 <h2 class="modal-title fs-5" id="tituloModal">Formulário validado!</h2>
-                <!-- modal-title = título da janela; fs-5 = tamanho da fonte. -->
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                <!-- btn-close = botão X; btn-close-white = X branco; data-bs-dismiss = fecha o modal. -->
             </div>
-            <!-- CORPO DO MODAL -->
+            <!-- Mensagem de confirmação -->
             <div class="modal-body">
-                <!-- modal-body = área que contém a mensagem principal. -->
-                Os campos foram preenchidos corretamente. Esta é uma demonstração: nenhuma mensagem foi enviada ou armazenada.
+                Os campos foram preenchidos corretamente! Esta é uma demonstração, nenhuma mensagem foi enviada.
             </div>
-            <!-- RODAPÉ DO MODAL -->
-            <div class="modal-footer border-secondary">
-                <!-- modal-footer = área inferior da janela. -->
+            <!-- Botão para fechar -->
+            <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-bs-dismiss="modal">Fechar</button>
-                <!-- Ao clicar, o Bootstrap fecha a janela. -->
             </div>
         </div>
     </div>
 </div>
-<!-- ==================== RODAPÉ ==================== -->
+<!-- RODAPÉ -->
 <footer class="bg-black text-center py-4">
-    <!-- footer = rodapé; bg-black = fundo preto; text-center = texto centralizado; py-4 = espaçamento vertical. -->
     <div class="container">
         <p class="mb-1">© 2026 - Tobias João Tabolca Fontanive</p>
-        <!-- mb-1 = pequena margem inferior. -->
         <small class="text-white-50">Criatividade, estratégia e comunicação.</small>
-        <!-- small = texto menor; text-white-50 = branco suavizado. -->
     </div>
 </footer>
-<!-- ==================== JAVASCRIPT ==================== -->
+<!-- JAVASCRIPT DO BOOTSTRAP -->
 <script src="../js/bootstrap.bundle.min.js"></script>
-<!-- Importa o JavaScript do Bootstrap, utilizado pelo menu, carrossel e modal. -->
+<!-- JAVASCRIPT PARA VALIDAR O FORMULÁRIO -->
 <script>
-    // ==================== MENU RESPONSIVO ====================
-    // Seleciona todos os links do menu de navegação.
-    document.querySelectorAll('#menu .nav-link').forEach((link) => {
-        // querySelectorAll = procura elementos pelos seletores CSS.
-        // forEach = percorre cada link encontrado.
-        // Adiciona um evento para quando o usuário clicar no link.
-        link.addEventListener('click', () => {
-            // addEventListener = observa um evento; click = clique do usuário.
-            // Localiza o menu pelo seu ID.
-            const menu = document.getElementById('menu');
-            // const = declara uma variável que não pode ser reatribuída.
-            // getElementById = procura um elemento pelo ID informado.
-            // Verifica se o menu está aberto.
-            if (menu.classList.contains('show')) {
-                // if = condição; classList.contains = verifica se existe determinada classe.
-                // show = classe que o Bootstrap utiliza quando o menu está expandido.
-                // Fecha o menu após clicar em um link.
-                bootstrap.Collapse.getOrCreateInstance(menu).hide();
-                // Collapse = componente do Bootstrap que abre ou fecha conteúdos.
-                // getOrCreateInstance = obtém ou cria o controle do componente.
-                // hide() = esconde o menu.
-            }
-        });
-    });
-    // ==================== FORMULÁRIO ====================
-    // Localiza o formulário pelo ID e armazena na variável.
-    const formulario = document.getElementById('form-contato');
-    // Adiciona um evento para quando o usuário tentar enviar o formulário.
-    formulario.addEventListener('submit', (evento) => {
-        // submit = evento de envio do formulário.
-        // Impede o comportamento padrão de envio e o recarregamento da página.
+    // Pegamos o formulário pelo ID.
+    const formulario = document.getElementById("form-contato");
+    // Quando clicar em validar, executa esta função.
+    formulario.addEventListener("submit", function(evento) {
+        // Impede o envio normal do formulário.
         evento.preventDefault();
-        // preventDefault() = cancela a ação padrão do navegador.
-        // Adiciona a classe Bootstrap que mostra as mensagens de validação.
-        formulario.classList.add('was-validated');
-        // classList.add = adiciona uma classe; was-validated = ativa os estilos de validação.
-        // Verifica se os campos obrigatórios foram preenchidos corretamente.
-        if (!formulario.checkValidity()) return;
-        // checkValidity() = verifica as regras dos campos HTML.
-        // ! significa NÃO; return interrompe a função se os dados forem inválidos.
-        // Se estiver tudo válido, abre o modal de confirmação.
-        bootstrap.Modal.getOrCreateInstance(document.getElementById('modalSucesso')).show();
-        // bootstrap.Modal = componente de janela do Bootstrap.
-        // getOrCreateInstance = obtém ou cria o controle do modal.
-        // show() = exibe a janela na tela.
-        // Limpa todos os campos do formulário.
-        formulario.reset();
-        // reset() = devolve os campos aos seus valores iniciais.
-        // Remove a classe de validação para limpar os avisos visuais.
-        formulario.classList.remove('was-validated');
-        // classList.remove = remove uma classe do elemento.
+        // Mostra os avisos de validação do Bootstrap.
+        formulario.classList.add("was-validated");
+        // Se todos os campos estiverem corretos, abre o modal.
+        if (formulario.checkValidity()) {
+            const modal = new bootstrap.Modal(document.getElementById("modalSucesso"));
+            modal.show();
+            // Limpa o formulário depois da validação.
+            formulario.reset();
+            formulario.classList.remove("was-validated");
+        }
     });
 </script>
 </body>
-<!-- Fim do conteúdo visível do site. -->
 </html>
-<!-- Fim do documento HTML. -->
