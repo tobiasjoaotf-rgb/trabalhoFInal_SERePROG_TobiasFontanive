@@ -4,6 +4,7 @@
 <head>
     <!-- Configurações da página -->
     <meta charset="UTF-8">
+    <!-- viewport permite que o layout se adapte ao celular e ao computador. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Tobias Fontanive - Comunicação e Design">
     <title>Tobias Fontanive | Comunicação & Design</title>
@@ -13,6 +14,7 @@
 <body class="bg-dark text-white">
 <!-- MENU DE NAVEGAÇÃO -->
 <header>
+    <!-- navbar-expand-lg deixa o menu aberto no computador e recolhido no celular. -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient py-3">
         <div class="container">
             <!-- Nome e marca do site -->
@@ -25,6 +27,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Links que levam para as seções da página -->
+            <!-- collapse controla a abertura do menu; os links com # vão para partes desta página. -->
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
@@ -42,12 +45,14 @@
     <!-- INÍCIO DO SITE -->
     <section id="inicio" class="bg-primary bg-gradient py-5">
         <div class="container py-5">
+            <!-- O grid do Bootstrap divide a linha em 12 colunas; aqui são 7 para texto e 5 para foto. -->
             <div class="row align-items-center g-4">
                 <!-- Texto da apresentação -->
                 <div class="col-lg-7">
                     <p class="text-info fw-bold">CRIATIVIDADE • ESTRATÉGIA • COMUNICAÇÃO</p>
                     <h1 class="display-3 fw-bold mb-4">Ideias que comunicam. Criatividade que conecta.</h1>
                     <!-- Carrossel de frases com transição -->
+                    <!-- carousel-fade cria o efeito de transição; 5000 significa 5 segundos. -->
                     <div id="frasesDestaque" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel" data-bs-interval="5000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -65,6 +70,7 @@
                 </div>
                 <!-- Minha fotografia -->
                 <div class="col-lg-5 text-center">
+                    <!-- img-fluid ajusta a foto à tela; alt descreve a imagem. -->
                     <img src="../img/eu (12).JPEG" class="img-fluid rounded-4 shadow-lg" alt="Foto de Tobias Fontanive">
                 </div>
             </div>
@@ -91,9 +97,12 @@
                 <p class="text-white-50">Onde criatividade, estratégia e tecnologia se encontram.</p>
             </div>
             <!-- Cards organizados pelo grid do Bootstrap -->
+            <!-- row e col organizam o layout responsivo; g-4 cria espaçamento entre os elementos. -->
             <div class="row g-4">
                 <!-- Card 1 -->
+                <!-- Em telas médias aparecem dois cards por linha; em telas grandes, quatro. -->
                 <div class="col-md-6 col-lg-3">
+                    <!-- card monta o cartão; card-body organiza o texto dentro dele. -->
                     <div class="card bg-dark text-white border-secondary h-100">
                         <div class="card-body p-4">
                             <h3 class="h5 text-info">Social Media</h3>
@@ -208,16 +217,19 @@
             </div>
             <!-- Carrossel com três grupos de quatro fotos -->
             <div id="carrosselTrajetoria" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <!-- Estes botões permitem escolher um dos três grupos de fotos. -->
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Grupo 1"></button>
                     <button type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide-to="1" aria-label="Grupo 2"></button>
                     <button type="button" data-bs-target="#carrosselTrajetoria" data-bs-slide-to="2" aria-label="Grupo 3"></button>
                 </div>
+                <!-- Cada carousel-item é um grupo de quatro fotos. -->
                 <div class="carousel-inner pb-4">
                     <!-- Primeiro grupo de fotos -->
                     <div class="carousel-item active">
                         <div class="row g-3">
                             <div class="col-6 col-md-3">
+                                <!-- ratio-1x1 deixa a foto quadrada; object-fit-cover preenche e pode cortar as bordas. -->
                                 <div class="ratio ratio-1x1">
                                     <img src="../img/eu (2).JPEG" class="w-100 h-100 object-fit-cover rounded-3" alt="Foto 1">
                                 </div>
@@ -315,11 +327,13 @@
                         <div class="card-body p-4">
                             <h3 class="fw-bold">Conte-me sobre seu projeto</h3>
                             <p class="text-white-50">Preencha o formulário abaixo para testar a validação dos campos.</p>
+                            <!-- novalidate desativa os avisos nativos; a validação é feita abaixo com JavaScript e Bootstrap. -->
                             <form id="form-contato" novalidate>
                                 <!-- Nome obrigatório -->
                                 <div class="mb-3">
                                     <label for="nome" class="form-label">Nome completo</label>
                                     <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                                    <!-- invalid-feedback aparece quando o campo obrigatório não é preenchido. -->
                                     <div class="invalid-feedback">Informe seu nome.</div>
                                 </div>
                                 <!-- E-mail obrigatório -->
@@ -336,6 +350,7 @@
                                 <!-- Lista de serviços -->
                                 <div class="mb-3">
                                     <label for="servico" class="form-label">Qual serviço você procura?</label>
+                                    <!-- select cria a lista de opções; required torna a escolha obrigatória. -->
                                     <select class="form-select" id="servico" required>
                                         <option value="" selected disabled>Selecione uma opção</option>
                                         <option>Social Media</option>
@@ -389,6 +404,7 @@
 </main>
 <!-- MODAL: janela de confirmação do formulário -->
 <div class="modal fade" id="modalSucesso" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+    <!-- modal-dialog-centered coloca a janela de confirmação no centro da tela. -->
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content bg-dark text-white">
             <!-- Cabeçalho do modal -->
@@ -415,6 +431,7 @@
     </div>
 </footer>
 <!-- JAVASCRIPT DO BOOTSTRAP -->
+<!-- O bundle faz funcionar o menu responsivo, os carrosséis e o modal. -->
 <script src="../js/bootstrap.bundle.min.js"></script>
 <!-- JAVASCRIPT PARA VALIDAR O FORMULÁRIO -->
 <script>
@@ -425,12 +442,15 @@
         // Impede o envio normal do formulário.
         evento.preventDefault();
         // Mostra os avisos de validação do Bootstrap.
+        // was-validated faz o Bootstrap mostrar quais campos estão inválidos.
         formulario.classList.add("was-validated");
         // Se todos os campos estiverem corretos, abre o modal.
+        // checkValidity() confere as regras dos campos, como required e type="email".
         if (formulario.checkValidity()) {
             const modal = new bootstrap.Modal(document.getElementById("modalSucesso"));
             modal.show();
             // Limpa o formulário depois da validação.
+            // Este formulário é demonstrativo: valida e limpa os campos, mas não envia os dados.
             formulario.reset();
             formulario.classList.remove("was-validated");
         }
